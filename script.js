@@ -116,5 +116,32 @@ $(document).ready(function() {
     loadImageAndColor(i);
   }
 
+  var spotlightItems = document.getElementsByClassName('spotlight-item');
+  var currentIndex = 0;
+  
+  setInterval(function() {
+    // Reset all items to small
+    for (var i = 0; i < spotlightItems.length; i++) {
+      spotlightItems[i].classList.remove('big');
+      spotlightItems[i].classList.add('small');
+      spotlightItems[i].firstElementChild.classList.remove('big');
+      spotlightItems[i].firstElementChild.classList.add('small');
+  
+    }
+  
+    // Set current item to big
+    spotlightItems[currentIndex].classList.add('big');
+    spotlightItems[currentIndex].classList.remove('small');
+    var childItems = spotlightItems[currentIndex].children;
+    spotlightItems[currentIndex].firstElementChild.classList.add('big');
+  spotlightItems[currentIndex].firstElementChild.classList.remove('small');
+    // Increase current index, loop back to 0 if it's the last item
+    currentIndex++;
+    if (currentIndex >= spotlightItems.length) {
+      currentIndex = 0;
+    }
+  }, 2000);
+  
+
   
 });

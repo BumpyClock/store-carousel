@@ -5,7 +5,8 @@
     width: 100%;
     display: flex;
     gap: 24px;
-    overflow: visible;
+   
+
     /* margin: 64px; */
 }
 
@@ -15,13 +16,18 @@
   width: 100%;
   border-radius:12px;
   cursor: pointer;
-  transition: all 0.175s ease-in-out;
+  transform-origin: left;
+
+  transition: all 0.350s ease-in-out;
 }
 .spotlight-item .big{
   height: 100%  !important;
   border-radius:12px  !important;
   aspect-ratio: 16/9  !important;
   flex: 0 0 auto  !important;
+  transition: all 0.350s ease-in-out;
+
+
 }
 
 .spotlight-item .small{
@@ -30,6 +36,9 @@
   border-radius:12px;
   aspect-ratio: 2/3  !important;
   flex: 1 1 auto  !important;
+  transition: all 0.350s ease-in-out;
+
+
 }
 .layer {
     position: absolute;
@@ -45,13 +54,13 @@
 }
 
 .bottom-layer {
-    background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center;
+    /* background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center; */
     background-size: cover;
     opacity: 1;
 }
 
 .middle-layer {
-    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    /* background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0)); */
 }
 
 .small .middle-layer {
@@ -60,7 +69,7 @@
 }
 
 .top-layer {
-    background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center;
+    /* background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center; */
     background-size: cover;
     opacity: 0.5;
 }
