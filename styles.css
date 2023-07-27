@@ -1,0 +1,133 @@
+
+.main-container {
+    position: relative;
+    height: 560px;
+    width: 100%;
+    display: flex;
+    gap: 24px;
+    overflow: visible;
+    /* margin: 64px; */
+}
+
+.spotlight-item{
+  position: relative;
+  height: 100%;
+  width: 100%;
+  border-radius:12px;
+  cursor: pointer;
+  transition: all 0.175s ease-in-out;
+}
+.spotlight-item .big{
+  height: 100%  !important;
+  border-radius:12px  !important;
+  aspect-ratio: 16/9  !important;
+  flex: 0 0 auto  !important;
+}
+
+.spotlight-item .small{
+  height: 100%  !important;
+  width: 100%  !important ;
+  border-radius:12px;
+  aspect-ratio: 2/3  !important;
+  flex: 1 1 auto  !important;
+}
+.layer {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+  border-radius:12px;
+}
+
+.shadow-layer {
+    /* background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center !important; */
+    background-size: cover !important;
+    filter: blur(30px);
+}
+
+.bottom-layer {
+    background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center;
+    background-size: cover;
+    opacity: 1;
+}
+
+.middle-layer {
+    background: linear-gradient(to right, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+}
+
+.small .middle-layer {
+    background:  rgba(255, 255, 255, 1);
+    opacity: 1;
+}
+
+.top-layer {
+    background: url('https://img-prod-cms-rt-microsoft-com.akamaized.net/cms/api/am/imageFileData/RW17ErZ?ver=7bd6&h=684') no-repeat center;
+    background-size: cover;
+    opacity: 0.5;
+}
+
+.text-layer {
+    position: absolute;
+    top: 45%;
+    left: 36px;
+    width: 100%;
+    text-align: left;
+  color:#fff;
+  opacity:1;
+  font-family:"Segoe UI Variable","Segoe UI";
+  max-width:400px;
+   
+}
+
+.text-layer h2 {
+  opacity: 1;
+  font-size:36px;
+  margin:0;
+  font-weight:500;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+  
+}
+
+.text-layer p{
+  opacity: .8;
+    font-size: 18px;
+  font-weight:600;
+  margin:0;
+  margin-top:8px;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+
+}
+
+.small .text-layer h2{
+  font-size:36px;
+}
+
+.small .text-layer p{
+  font-size: 14px;
+  visibility: hidden;
+}
+#next-btn {
+    border: 1px solid #fff; 
+  margin-top:24px;
+    background: none;
+    border-radius: 7px;
+    padding: 10px 20px;
+    font-size: 14px;
+  font-family:"Segoe UI Variable","Segoe UI";
+    color: #fff; 
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+    transition: background-color 0.3s ease;
+}
+
+#next-btn:hover {
+    background-color: rgba(255, 255, 255, 0.1);
+}
+
+#next-btn:active {
+    background-color: rgba(255, 255, 255, 0.2);
+}
+
+.layer, .text-layer h2, .text-layer p {
+    transition: all 0.175s ease-in-out;
+}
